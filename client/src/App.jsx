@@ -1,22 +1,15 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
-import { Footer, NavBar, Services, Transactions, Welcome } from './components'
+import { Navbar, Welcome, Footer, Services, Transactions } from "./components";
 
-function App() {
-    // const [count, setCount] = useState(0)
+const App = () => (
+  <div className="min-h-screen">
+    <div className="gradient-bg-welcome">
+      <Navbar />
+      <Welcome />
+    </div>
+    <Services />
+    <Transactions />
+    <Footer />
+  </div>
+);
 
-    return (
-        <div className='min-h-screen'>
-            <div className='gradient-bg-welcome'>
-                <NavBar/>
-                <Welcome/>
-            </div>
-            <Services/>
-            <Transactions/>
-            <Footer/>
-        </div>
-    )
-}
-
-export default App
+export default App;
